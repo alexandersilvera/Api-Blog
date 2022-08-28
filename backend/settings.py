@@ -121,21 +121,6 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',
 ]
 
-if not DEBUG:
-    CORS_ORIGIN_WHITELIST = [
-        'https://centroumbandistareinodamata.com',
-        'https://admin.centroumbandistareinodamata.com',
-        'https://blog.centroumbandistareinodamata.com',
-        'https://reinodamata-blog-api.herokuapp.com/',
-    ]
-
-    CSRF_TRUSTED_ORIGINS = [
-        'https://centroumbandistareinodamata.com',
-        'https://admin.centroumbandistareinodamata.com',
-        'https://blog.centroumbandistareinodamata.com',
-        'https://reinodamata-blog-api.herokuapp.com/',
-    ]
-
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.Argon2PasswordHasher",
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",
