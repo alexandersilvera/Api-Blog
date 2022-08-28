@@ -21,7 +21,7 @@ DEBUG = os.environ.get('DEBUG')
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "https://reinodamata-blog-api.herokuapp.com",
+    "reinodamata-blog-api.herokuapp.com",
 ]
 
 
