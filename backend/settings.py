@@ -24,12 +24,6 @@ ALLOWED_HOSTS = [
     "https://reinodamata-blog-api.herokuapp.com",
 ]
 
-if not DEBUG:
-    ALLOWED_HOSTS = [
-        "https://reinodamata-blog-api.herokuapp.com",
-        "reinodamata-blog-api.herokuapp.com",
-        "www.reinodamata-blog-api.herokuapp.com"
-    ]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
