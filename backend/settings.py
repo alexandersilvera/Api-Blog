@@ -27,8 +27,8 @@ ALLOWED_HOSTS = [
 if not DEBUG:
     ALLOWED_HOSTS = [
         "https://reinodamata-blog-api.herokuapp.com",
-        "centroumbandistareinodamata.com",
-        "www.centroumbandistareinodamata.com"
+        "reinodamata-blog-api.herokuapp.com",
+        "www.reinodamata-blog-api.herokuapp.com"
     ]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -136,7 +136,7 @@ if not DEBUG:
     ]
 
     CSRF_TRUSTED_ORIGINS = [
-        'hhttps://centroumbandistareinodamata.com',
+        'https://centroumbandistareinodamata.com',
         'https://admin.centroumbandistareinodamata.com',
         'https://blog.centroumbandistareinodamata.com',
         'https://reinodamata-blog-api.herokuapp.com/',
