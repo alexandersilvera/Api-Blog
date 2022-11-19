@@ -21,7 +21,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "reinodamata-blog-api.herokuapp.com",
+    "https://web-production-dd68.up.railway.app/",
 ]
 
 
