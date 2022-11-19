@@ -21,7 +21,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "web-production-dd68.up.railway.app",
+    "api-blog-reinodamata.up.railway.app",
 ]
 
 
