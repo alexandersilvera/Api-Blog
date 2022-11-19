@@ -1,3 +1,4 @@
+from distutils.debug import DEBUG
 from pathlib import Path
 import os
 import dj_database_url
@@ -14,8 +15,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = os.environ.get('DEBUG')
-
+DEBUG = True
+#DEBUG='RENDER'
 
 ALLOWED_HOSTS = [
     "localhost",
@@ -99,10 +100,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgres://reinodamata_server:EhFpWESWkdTcCAFSH8DElXdj0sg5peZR@dpg-cc7t82arrk0agdurbae0-a.oregon-postgres.render.com/reinodamata_blog',
+        conn_max_age=600
+    )
 }
 
 db_from_env = dj_database_url.config(conn_max_age=600)
@@ -160,8 +162,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 STATICFILES_DIRS = (
