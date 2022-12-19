@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgres://reinodamata_server:EhFpWESWkdTcCAFSH8DElXdj0sg5peZR@dpg-cc7t82arrk0agdurbae0-a.oregon-postgres.render.com/reinodamata_blog',
+        default='postgresql://postgres:A0Xvtye1DKjmEziEBsyb@containers-us-west-171.railway.app:5748/railway',
         conn_max_age=600
     )
 }
